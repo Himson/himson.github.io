@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Himosn&#39;s Blog</title>
+  
+  <subtitle>for the love ones</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-12-12T22:33:00.301Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Himson</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Add laser to the robot in Gazebo and Some Coding with Matlab</title>
+    <link href="http://yoursite.com/2018/12/12/Difference%20between%20imfilter%20filter2%20conv2/"/>
+    <id>http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/</id>
+    <published>2018-12-12T15:20:21.000Z</published>
+    <updated>2018-12-12T22:33:00.301Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Laser"><a href="#Laser" class="headerlink" title="Laser"></a>Laser</h2><p>First we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I found from Hokuyo plugin <a href="http://sdformat.org/spec?ver=1.6&amp;elem=model" target="_blank" rel="noopener">sdf file</a>. But I try for many times but it won’t work.<br><strong>Here Start the Bug statement</strong><br>I have already edit the world manualy in Gazebo world editor. Back then I try to add stair model in gazebo. When I save the world, Gazebo save the flie include the snake model into world.sdf file. Thus when I start gazebo, the model statement in world.sdf overlap the statement in model.sdf and ignore my edit.<br><em>sad story</em></p><h2 id="Matlab-Coding"><a href="#Matlab-Coding" class="headerlink" title="Matlab Coding"></a>Matlab Coding</h2><h3 id="Difference-between-filter2-conv2-imfilter"><a href="#Difference-between-filter2-conv2-imfilter" class="headerlink" title="Difference between filter2, conv2, imfilter"></a>Difference between filter2, conv2, imfilter</h3><p>filter2 and conv2 do almost the same thing: the results are related like this:<br> conv2(image, mask) is the same as filter2(rot90(mask,2), image) </p><p>The relationship can also be stated by saying that filter2 implements correlation, whilst conv2 implements convolution.  </p><p>In addition, filter2 implements an optimisation for the case of separable masks. This shouldn’t affect significantly the numerical values of the results, just the speed.  </p><p>The fex contribution convolve2 implements a stronger set of optimisations. There’s a comparison here.<br>imfilter does the same as conv2/filter2/convolve2 but with lots of extra features, such as handling different data types, handling colour images, switching the algorithm between correlation and convolution, and offering more options than conv2 and filter2 for what happens at the image boundaries.<br>Bottom line: if you are happy to work with data of type double (MATLAB’s default) use conv2. If it’s slow try convolve2 to see if it will speed it up. If you need the extra features, use imfilter.</p><h3 id="command"><a href="#command" class="headerlink" title="command"></a>command</h3><p>fspecial: create special filter<br>imfilter: becareful with the boundary option</p><h2 id="Proof-of-Green’s-Therom"><a href="#Proof-of-Green’s-Therom" class="headerlink" title="Proof of Green’s Therom"></a>Proof of Green’s Therom</h2><ol><li>Prove it is true for the situation in a cube</li><li>Prove it inductivly for disjoint union from 1:n</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Laser&quot;&gt;&lt;a href=&quot;#Laser&quot; class=&quot;headerlink&quot; title=&quot;Laser&quot;&gt;&lt;/a&gt;Laser&lt;/h2&gt;&lt;p&gt;First we start with a bug report. I have been troubled by 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test_my_site</title>
+    <link href="http://yoursite.com/2018/02/25/test-my-site/"/>
+    <id>http://yoursite.com/2018/02/25/test-my-site/</id>
+    <published>2018-02-25T20:34:56.000Z</published>
+    <updated>2018-02-25T13:34:56.438Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/02/25/hello-world/"/>
+    <id>http://yoursite.com/2018/02/25/hello-world/</id>
+    <published>2018-02-25T04:39:11.921Z</published>
+    <updated>2018-02-25T04:39:11.921Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
