@@ -183,7 +183,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -193,7 +193,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -216,6 +216,147 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/13/Finite Universe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Himson">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Himosn's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/13/Finite Universe/" itemprop="url">Unbenannt</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-13T17:43:16+01:00">
+                2018-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p>title: Finite Universe<br>date: 2018-12-13 17:42:00<br>—﻿</p>
+<h2 id="Master-Automation"><a href="#Master-Automation" class="headerlink" title="Master Automation"></a>Master Automation</h2><ol>
+<li><p>Let <code>L</code>be a ﬁxed-length language. The language recognized from the<br>state <code>L</code>of the master automaton is <code>L</code>.<br>proof can be done by using induction. When n = 0, we check the state directly to see if it is accepted, which is whether empty language or language with empty word. The Induction process is done by checking the successor of the state.</p>
+</li>
+<li><p>The branch <code>$A_L$</code>is  the minimal DFA.<br>from the proposition above distinct state in Master recognize distinct state. A DFA is minimal if and only if the distinct states recognizes distinct languages</p>
+</li>
+</ol>
+<h2 id="Data-Structure-Implementation"><a href="#Data-Structure-Implementation" class="headerlink" title="Data Structure Implementation"></a>Data Structure Implementation</h2><p>First define the Automata for finite set of fixed-length language formally. Then assign node for different states/languages. Conventionally assign 0 to empty language and 1 to the language with only the empty word.  for each node there are the successor for different letter in the alphbets</p>
+<p>The object is to implement different operations. First introduce the make(s)<br>method. It reture the state T has the state s as the successor. If state T is not exist in current stack, we make a new node &lt;q,s&gt; and push it into the stack.</p>
+<h3 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h3><ol>
+<li>Membership<br>Linear Time, O(n), the length of the language.</li>
+<li>Intersection<br>It is done recursively. Look into the successor, if they are not empty then the new suceessor is their union. Keep doing this and keep track of all the states have processed, do binary search every time process the states will safe time.</li>
+<li>fixed length complement<br>when the length is not 0, the complement of the residual of letter a , is the residual of the letter a  of the complement.<br>Proof: w is in residual casue of a in complement of L as long as aw is not in L, then w is not in residual of a in L meaning that it is also complement of residual a.<br>also can be done recursivly, start the complement from the button, keep track of the length.</li>
+<li>fixed length emptiness<br>Such can be checked in constant time</li>
+</ol>
+<h3 id="Determinization-and-Minimization"><a href="#Determinization-and-Minimization" class="headerlink" title="Determinization and Minimization"></a>Determinization and Minimization</h3><h3 id="Relation"><a href="#Relation" class="headerlink" title="Relation"></a>Relation</h3><h2 id="Binary-Desicion-Diagram"><a href="#Binary-Desicion-Diagram" class="headerlink" title="Binary Desicion Diagram"></a>Binary Desicion Diagram</h2><p>Popular Data structure can be seen as finite automate regular language over {0,1}<br>Coversion between BDD and minDFA is applicable  </p>
+<h3 id="Kernels"><a href="#Kernels" class="headerlink" title="Kernels"></a>Kernels</h3><p><em>Definiation</em>. the set of the residual for different letters are not the same is call a kernel.  Or L is 0 or empty word   </p>
+<p>We then can construct the master     desicion diagram</p>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>.</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -259,7 +400,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T16:20:21+01:00">
                 2018-12-12
@@ -359,125 +500,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/test-my-site/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Himson">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Himosn's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/25/test-my-site/" itemprop="url">test_my_site</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T21:34:56+01:00">
-                2018-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -507,7 +529,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T05:39:11+01:00">
                 2018-02-25
@@ -640,7 +662,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -697,7 +719,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

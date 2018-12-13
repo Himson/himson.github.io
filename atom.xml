@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-12T22:33:00.301Z</updated>
+  <updated>2018-12-13T16:43:16.767Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/12/13/Finite%20Universe/"/>
+    <id>http://yoursite.com/2018/12/13/Finite Universe/</id>
+    <published>2018-12-13T16:43:16.775Z</published>
+    <updated>2018-12-13T16:43:16.767Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: Finite Universe<br>date: 2018-12-13 17:42:00<br>—﻿</p><h2 id="Master-Automation"><a href="#Master-Automation" class="headerlink" title="Master Automation"></a>Master Automation</h2><ol><li><p>Let <code>L</code>be a ﬁxed-length language. The language recognized from the<br>state <code>L</code>of the master automaton is <code>L</code>.<br>proof can be done by using induction. When n = 0, we check the state directly to see if it is accepted, which is whether empty language or language with empty word. The Induction process is done by checking the successor of the state.</p></li><li><p>The branch <code>$A_L$</code>is  the minimal DFA.<br>from the proposition above distinct state in Master recognize distinct state. A DFA is minimal if and only if the distinct states recognizes distinct languages</p></li></ol><h2 id="Data-Structure-Implementation"><a href="#Data-Structure-Implementation" class="headerlink" title="Data Structure Implementation"></a>Data Structure Implementation</h2><p>First define the Automata for finite set of fixed-length language formally. Then assign node for different states/languages. Conventionally assign 0 to empty language and 1 to the language with only the empty word.  for each node there are the successor for different letter in the alphbets</p><p>The object is to implement different operations. First introduce the make(s)<br>method. It reture the state T has the state s as the successor. If state T is not exist in current stack, we make a new node &lt;q,s&gt; and push it into the stack.</p><h3 id="Set-Operation"><a href="#Set-Operation" class="headerlink" title="Set Operation"></a>Set Operation</h3><ol><li>Membership<br>Linear Time, O(n), the length of the language.</li><li>Intersection<br>It is done recursively. Look into the successor, if they are not empty then the new suceessor is their union. Keep doing this and keep track of all the states have processed, do binary search every time process the states will safe time.</li><li>fixed length complement<br>when the length is not 0, the complement of the residual of letter a , is the residual of the letter a  of the complement.<br>Proof: w is in residual casue of a in complement of L as long as aw is not in L, then w is not in residual of a in L meaning that it is also complement of residual a.<br>also can be done recursivly, start the complement from the button, keep track of the length.</li><li>fixed length emptiness<br>Such can be checked in constant time</li></ol><h3 id="Determinization-and-Minimization"><a href="#Determinization-and-Minimization" class="headerlink" title="Determinization and Minimization"></a>Determinization and Minimization</h3><h3 id="Relation"><a href="#Relation" class="headerlink" title="Relation"></a>Relation</h3><h2 id="Binary-Desicion-Diagram"><a href="#Binary-Desicion-Diagram" class="headerlink" title="Binary Desicion Diagram"></a>Binary Desicion Diagram</h2><p>Popular Data structure can be seen as finite automate regular language over {0,1}<br>Coversion between BDD and minDFA is applicable  </p><h3 id="Kernels"><a href="#Kernels" class="headerlink" title="Kernels"></a>Kernels</h3><p><em>Definiation</em>. the set of the residual for different letters are not the same is call a kernel.  Or L is 0 or empty word   </p><p>We then can construct the master     desicion diagram</p><blockquote><p>Written with <a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>.</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;p&gt;title: Finite Universe&lt;br&gt;date: 2018-12-13 17:42:00&lt;br&gt;—﻿&lt;/p&gt;
+&lt;h2 id=&quot;Master-Automation&quot;&gt;&lt;a href=&quot;#Master-Automation&quot; class=&quot;headerl
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Add laser to the robot in Gazebo and Some Coding with Matlab</title>
@@ -31,20 +54,6 @@
       
         &lt;h2 id=&quot;Laser&quot;&gt;&lt;a href=&quot;#Laser&quot; class=&quot;headerlink&quot; title=&quot;Laser&quot;&gt;&lt;/a&gt;Laser&lt;/h2&gt;&lt;p&gt;First we start with a bug report. I have been troubled by 
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>test_my_site</title>
-    <link href="http://yoursite.com/2018/02/25/test-my-site/"/>
-    <id>http://yoursite.com/2018/02/25/test-my-site/</id>
-    <published>2018-02-25T20:34:56.000Z</published>
-    <updated>2018-02-25T13:34:56.438Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
