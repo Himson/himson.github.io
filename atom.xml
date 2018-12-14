@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-13T16:49:43.913Z</updated>
+  <updated>2018-12-14T23:35:53.154Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Laser plugin in Gazebo</title>
+    <link href="http://yoursite.com/2018/12/15/Gazebo/"/>
+    <id>http://yoursite.com/2018/12/15/Gazebo/</id>
+    <published>2018-12-14T23:28:34.000Z</published>
+    <updated>2018-12-14T23:35:53.154Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="The-Problem-with-libRayPlugin-so"><a href="#The-Problem-with-libRayPlugin-so" class="headerlink" title="The Problem with libRayPlugin.so"></a>The Problem with libRayPlugin.so</h2><p>The topic it published is not the rostopic. But it can be seen in gazebo. Because the plugin publish only the gazebo topic to the gazebo master.<br>At first I try to solved it by writing a new node and act as a transmitter. But it is just too expensive. And the msg type is called laserStampMsg with is not coincide with the msg in ros laserScan.<br>The solution I actually already find it when I am trying to solve the first bug. Simply change the plugin to libgazebo_ros_laser.so. </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;The-Problem-with-libRayPlugin-so&quot;&gt;&lt;a href=&quot;#The-Problem-with-libRayPlugin-so&quot; class=&quot;headerlink&quot; title=&quot;The Problem with libRayPlugi
+      
+    
+    </summary>
+    
+    
+      <category term="ros" scheme="http://yoursite.com/tags/ros/"/>
+    
+  </entry>
   
   <entry>
     <title>Finite Universe</title>

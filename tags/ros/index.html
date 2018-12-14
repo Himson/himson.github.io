@@ -81,16 +81,12 @@
 
 
 
-<meta name="description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Add laser to the robot in Gazebo and Some Coding with Matlab">
-<meta property="og:url" content="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Himosn&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/tags/ros/index.html">
 <meta property="og:site_name" content="Himosn&#39;s Blog">
-<meta property="og:description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
-<meta property="og:updated_time" content="2018-12-12T22:33:00.301Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add laser to the robot in Gazebo and Some Coding with Matlab">
-<meta name="twitter:description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
+<meta name="twitter:title" content="Himosn&#39;s Blog">
 
 
 
@@ -120,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/ros/"/>
 
 
 
 
 
-  <title>Add laser to the robot in Gazebo and Some Coding with Matlab | Himosn's Blog</title>
+  <title>Tag: ros | Himosn's Blog</title>
   
 
 
@@ -145,7 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -219,169 +215,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>ros<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Himson">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Himosn's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">Add laser to the robot in Gazebo and Some Coding with Matlab</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/12/15/Gazebo/" itemprop="url">
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span itemprop="name">Laser plugin in Gazebo</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T16:20:21+01:00">
-                2018-12-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h2 id="Laser"><a href="#Laser" class="headerlink" title="Laser"></a>Laser</h2><p>First we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I found from Hokuyo plugin <a href="http://sdformat.org/spec?ver=1.6&amp;elem=model" target="_blank" rel="noopener">sdf file</a>. But I try for many times but it won’t work.<br><strong>Here Start the Bug statement</strong><br>I have already edit the world manualy in Gazebo world editor. Back then I try to add stair model in gazebo. When I save the world, Gazebo save the flie include the snake model into world.sdf file. Thus when I start gazebo, the model statement in world.sdf overlap the statement in model.sdf and ignore my edit.<br><em>sad story</em></p>
-<h2 id="Matlab-Coding"><a href="#Matlab-Coding" class="headerlink" title="Matlab Coding"></a>Matlab Coding</h2><h3 id="Difference-between-filter2-conv2-imfilter"><a href="#Difference-between-filter2-conv2-imfilter" class="headerlink" title="Difference between filter2, conv2, imfilter"></a>Difference between filter2, conv2, imfilter</h3><p>filter2 and conv2 do almost the same thing: the results are related like this:<br> conv2(image, mask) is the same as filter2(rot90(mask,2), image) </p>
-<p>The relationship can also be stated by saying that filter2 implements correlation, whilst conv2 implements convolution.  </p>
-<p>In addition, filter2 implements an optimisation for the case of separable masks. This shouldn’t affect significantly the numerical values of the results, just the speed.  </p>
-<p>The fex contribution convolve2 implements a stronger set of optimisations. There’s a comparison here.<br>imfilter does the same as conv2/filter2/convolve2 but with lots of extra features, such as handling different data types, handling colour images, switching the algorithm between correlation and convolution, and offering more options than conv2 and filter2 for what happens at the image boundaries.<br>Bottom line: if you are happy to work with data of type double (MATLAB’s default) use conv2. If it’s slow try convolve2 to see if it will speed it up. If you need the extra features, use imfilter.</p>
-<h3 id="command"><a href="#command" class="headerlink" title="command"></a>command</h3><p>fspecial: create special filter<br>imfilter: becareful with the boundary option</p>
-<h2 id="Proof-of-Green’s-Therom"><a href="#Proof-of-Green’s-Therom" class="headerlink" title="Proof of Green’s Therom"></a>Proof of Green’s Therom</h2><ol>
-<li>Prove it is true for the situation in a cube</li>
-<li>Prove it inductivly for disjoint union from 1:n</li>
-</ol>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-      
-        <div class="post-widgets">
+            </a>
         
+      </h2>
 
-        
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-12-15T00:28:34+01:00"
+              content="2018-12-15" >
+          12-15
+        </time>
+      </div>
 
-        
-          
-          <div id="needsharebutton-postbottom">
-            <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
-            </span>
-          </div>
-        
-        </div>
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/02/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/13/Universe/" rel="prev" title="Finite Universe">
-                Finite Universe <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -389,10 +270,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -413,17 +290,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -481,22 +349,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Laser"><span class="nav-number">1.</span> <span class="nav-text">Laser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matlab-Coding"><span class="nav-number">2.</span> <span class="nav-text">Matlab Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-filter2-conv2-imfilter"><span class="nav-number">2.1.</span> <span class="nav-text">Difference between filter2, conv2, imfilter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#command"><span class="nav-number">2.2.</span> <span class="nav-text">command</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proof-of-Green’s-Therom"><span class="nav-number">3.</span> <span class="nav-text">Proof of Green’s Therom</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -636,10 +488,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

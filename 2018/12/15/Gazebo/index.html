@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ros," />
 
 
 
@@ -81,16 +81,17 @@
 
 
 
-<meta name="description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
+<meta name="description" content="The Problem with libRayPlugin.soThe topic it published is not the rostopic. But it can be seen in gazebo. Because the plugin publish only the gazebo topic to the gazebo master.At first I try to solved">
+<meta name="keywords" content="ros">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add laser to the robot in Gazebo and Some Coding with Matlab">
-<meta property="og:url" content="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/index.html">
+<meta property="og:title" content="Laser plugin in Gazebo">
+<meta property="og:url" content="http://yoursite.com/2018/12/15/Gazebo/index.html">
 <meta property="og:site_name" content="Himosn&#39;s Blog">
-<meta property="og:description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
-<meta property="og:updated_time" content="2018-12-12T22:33:00.301Z">
+<meta property="og:description" content="The Problem with libRayPlugin.soThe topic it published is not the rostopic. But it can be seen in gazebo. Because the plugin publish only the gazebo topic to the gazebo master.At first I try to solved">
+<meta property="og:updated_time" content="2018-12-14T23:35:53.154Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add laser to the robot in Gazebo and Some Coding with Matlab">
-<meta name="twitter:description" content="LaserFirst we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I fou">
+<meta name="twitter:title" content="Laser plugin in Gazebo">
+<meta name="twitter:description" content="The Problem with libRayPlugin.soThe topic it published is not the rostopic. But it can be seen in gazebo. Because the plugin publish only the gazebo topic to the gazebo master.At first I try to solved">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/15/Gazebo/"/>
 
 
 
 
 
-  <title>Add laser to the robot in Gazebo and Some Coding with Matlab | Himosn's Blog</title>
+  <title>Laser plugin in Gazebo | Himosn's Blog</title>
   
 
 
@@ -233,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/Difference between imfilter filter2 conv2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/Gazebo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Himson">
@@ -250,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Add laser to the robot in Gazebo and Some Coding with Matlab</h1>
+          <h1 class="post-title" itemprop="name headline">Laser plugin in Gazebo</h1>
         
 
         <div class="post-meta">
@@ -262,8 +263,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T16:20:21+01:00">
-                2018-12-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-15T00:28:34+01:00">
+                2018-12-15
               </time>
             
 
@@ -300,16 +301,7 @@
       
 
       
-        <h2 id="Laser"><a href="#Laser" class="headerlink" title="Laser"></a>Laser</h2><p>First we start with a bug report. I have been troubled by it for 3 weeks. I have to add a laser into the first link in the snake robot. Gazebo plugin already provide “libRayplugin.so” which I found from Hokuyo plugin <a href="http://sdformat.org/spec?ver=1.6&amp;elem=model" target="_blank" rel="noopener">sdf file</a>. But I try for many times but it won’t work.<br><strong>Here Start the Bug statement</strong><br>I have already edit the world manualy in Gazebo world editor. Back then I try to add stair model in gazebo. When I save the world, Gazebo save the flie include the snake model into world.sdf file. Thus when I start gazebo, the model statement in world.sdf overlap the statement in model.sdf and ignore my edit.<br><em>sad story</em></p>
-<h2 id="Matlab-Coding"><a href="#Matlab-Coding" class="headerlink" title="Matlab Coding"></a>Matlab Coding</h2><h3 id="Difference-between-filter2-conv2-imfilter"><a href="#Difference-between-filter2-conv2-imfilter" class="headerlink" title="Difference between filter2, conv2, imfilter"></a>Difference between filter2, conv2, imfilter</h3><p>filter2 and conv2 do almost the same thing: the results are related like this:<br> conv2(image, mask) is the same as filter2(rot90(mask,2), image) </p>
-<p>The relationship can also be stated by saying that filter2 implements correlation, whilst conv2 implements convolution.  </p>
-<p>In addition, filter2 implements an optimisation for the case of separable masks. This shouldn’t affect significantly the numerical values of the results, just the speed.  </p>
-<p>The fex contribution convolve2 implements a stronger set of optimisations. There’s a comparison here.<br>imfilter does the same as conv2/filter2/convolve2 but with lots of extra features, such as handling different data types, handling colour images, switching the algorithm between correlation and convolution, and offering more options than conv2 and filter2 for what happens at the image boundaries.<br>Bottom line: if you are happy to work with data of type double (MATLAB’s default) use conv2. If it’s slow try convolve2 to see if it will speed it up. If you need the extra features, use imfilter.</p>
-<h3 id="command"><a href="#command" class="headerlink" title="command"></a>command</h3><p>fspecial: create special filter<br>imfilter: becareful with the boundary option</p>
-<h2 id="Proof-of-Green’s-Therom"><a href="#Proof-of-Green’s-Therom" class="headerlink" title="Proof of Green’s Therom"></a>Proof of Green’s Therom</h2><ol>
-<li>Prove it is true for the situation in a cube</li>
-<li>Prove it inductivly for disjoint union from 1:n</li>
-</ol>
+        <h2 id="The-Problem-with-libRayPlugin-so"><a href="#The-Problem-with-libRayPlugin-so" class="headerlink" title="The Problem with libRayPlugin.so"></a>The Problem with libRayPlugin.so</h2><p>The topic it published is not the rostopic. But it can be seen in gazebo. Because the plugin publish only the gazebo topic to the gazebo master.<br>At first I try to solved it by writing a new node and act as a transmitter. But it is just too expensive. And the msg type is called laserStampMsg with is not coincide with the msg in ros laserScan.<br>The solution I actually already find it when I am trying to solve the first bug. Simply change the plugin to libgazebo_ros_laser.so. </p>
 
       
     </div>
@@ -324,6 +316,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ros/" rel="tag"># ros</a>
+          
+        </div>
       
 
       
@@ -349,8 +347,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/25/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/12/13/Universe/" rel="next" title="Finite Universe">
+                <i class="fa fa-chevron-left"></i> Finite Universe
               </a>
             
           </div>
@@ -358,10 +356,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/13/Universe/" rel="prev" title="Finite Universe">
-                Finite Universe <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Laser"><span class="nav-number">1.</span> <span class="nav-text">Laser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matlab-Coding"><span class="nav-number">2.</span> <span class="nav-text">Matlab Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-filter2-conv2-imfilter"><span class="nav-number">2.1.</span> <span class="nav-text">Difference between filter2, conv2, imfilter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#command"><span class="nav-number">2.2.</span> <span class="nav-text">command</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Proof-of-Green’s-Therom"><span class="nav-number">3.</span> <span class="nav-text">Proof of Green’s Therom</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Problem-with-libRayPlugin-so"><span class="nav-number">1.</span> <span class="nav-text">The Problem with libRayPlugin.so</span></a></li></ol></div>
             
 
           </div>
