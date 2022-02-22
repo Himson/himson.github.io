@@ -62,5 +62,5 @@ ignore: null
 theme: next
 deploy:
   type: git
-  repo: https://github.com/Himson/himson.github.io.git
+  repo: git@github.com:Himson/himson.github.io.git
   branch: master
