@@ -145,6 +145,73 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://lisongqian.xyz/2022/02/25/%E6%97%A0%E7%BA%BF%E6%84%9F%E7%9F%A5CSI%E6%A0%A1%E5%87%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="李松谦">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Himson's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/25/%E6%97%A0%E7%BA%BF%E6%84%9F%E7%9F%A5CSI%E6%A0%A1%E5%87%86/" class="post-title-link" itemprop="url">无线感知CSI相位校准</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-25 09:33:45 / 修改时间：09:48:05" itemprop="dateCreated datePublished" datetime="2022-02-25T09:33:45+08:00">2022-02-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="无线感知CSI相位校准：从理论到系统实践"><a href="#无线感知CSI相位校准：从理论到系统实践" class="headerlink" title="无线感知CSI相位校准：从理论到系统实践"></a>无线感知CSI相位校准：从理论到系统实践</h1><p>我想到哪写到哪。毕竟只是个人博客。</p>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><h3 id="一，由傅里叶变换得到的常识"><a href="#一，由傅里叶变换得到的常识" class="headerlink" title="一，由傅里叶变换得到的常识"></a>一，由傅里叶变换得到的常识</h3><p>CSI, channel state information是对信道频响（Channel frequency response）的离散采样。它是带限的(band-limited)。由于采样定理，带宽决定了CSI的时间上对多径的分辨率。假设一个“完美”系统。只有一条无线传播路径，比如是Line-of-sight path。根据傅里叶变换，CSI的幅度是一个常数。相位则会随着子载波发生线性的相位翻转，翻转的斜率是由系统的sampling timing offset(SFO)决定的。而如果场景是多径，我们可以观察到CSI在幅度和相位上存在频率选择性。又由于CSI是CFR的离散采样，CSI的频点上的间隔决定了时间上的不模糊(unambigious)范围。</p>
+<h3 id="二，那些不完美的因素"><a href="#二，那些不完美的因素" class="headerlink" title="二，那些不完美的因素"></a>二，那些不完美的因素</h3><p>实际系统是复杂的。有如下因素会带来CSI相位的误差</p>
+<ol>
+<li>Carrier frequency offset</li>
+<li>PLL frequency offset</li>
+<li>Sampling frequency offset</li>
+</ol>
+<p>待更</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://lisongqian.xyz/2022/02/24/hexo-%E5%9F%9F%E5%90%8D%E8%AE%BE%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -168,10 +235,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-24 19:22:13 / 修改时间：19:22:46" itemprop="dateCreated datePublished" datetime="2022-02-24T19:22:13+08:00">2022-02-24</time>
+              <time title="创建时间：2022-02-24 19:22:13" itemprop="dateCreated datePublished" datetime="2022-02-24T19:22:13+08:00">2022-02-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-02-25 09:32:41" itemprop="dateModified" datetime="2022-02-25T09:32:41+08:00">2022-02-25</time>
+              </span>
 
           
 
@@ -184,8 +257,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="域名设置记录"><a href="#域名设置记录" class="headerlink" title="域名设置记录"></a>域名设置记录</h1><ol>
-<li>记得域名要实名认证</li>
+          <h1 id="GitHub-page使用"><a href="#GitHub-page使用" class="headerlink" title="GitHub page使用"></a>GitHub page使用</h1><ol>
+<li>在阿里云设置</li>
 </ol>
 
       
@@ -268,9 +341,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
