@@ -1,0 +1,11 @@
+---
+title: Parallel Decoding in WiFi Backscatter
+date: 2022-02-25 12:48:48
+tags: Parallel Decoding, WiFi, Backscatter
+---
+# WiFi 反射通信中的并行解码
+
+## 反射通信
+
+反射通信是超低功耗通信的关键手段，代表是RFID。由于反射通信标签是通过反射，调制外部的无线信号进行通信，反射通信标签不需要射频发生的器件。于是反射通信标签可以实现极简的硬件结构。
+## 反射通信中的并行解码
