@@ -1,7 +1,7 @@
 ---
 title: Parallel Decoding in WiFi Backscatter
 date: 2022-02-25 12:48:48
-tags: Parallel Decoding, WiFi, Backscatter
+tags: Parallel Decoding; WiFi; Backscatter
 ---
 # WiFi 反射通信中的并行解码
 

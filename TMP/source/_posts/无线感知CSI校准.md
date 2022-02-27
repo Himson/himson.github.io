@@ -1,7 +1,7 @@
 ---
 title: 无线感知CSI相位校准
 date: 2022-02-25 09:33:45
-tags: wireless, sensing
+tags: wireless; sensing
 ---
 # 无线感知CSI相位校准：从理论到系统实践
 我想到哪写到哪。毕竟只是个人博客。

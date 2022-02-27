@@ -59,8 +59,8 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: next
+theme: pure
 deploy:
   type: git
-  repo: git@github.com:Himson/himson.github.io.git
+  repo: git@blog:/home/git/blog.git
   branch: master
